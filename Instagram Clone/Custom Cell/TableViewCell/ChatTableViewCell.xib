@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u62-by-3Sd" customClass="PaddingLabel" customModule="Instagram_Clone" customModuleProvider="target">
-                        <rect key="frame" x="220" y="8" width="42" height="35"/>
+                        <rect key="frame" x="252" y="8" width="10" height="35"/>
                         <color key="backgroundColor" name="outgoingMessageBackground"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="NOf-dv-kr4"/>
@@ -42,7 +42,7 @@
                         </userDefinedRuntimeAttributes>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yqo-jk-e9X" customClass="PaddingLabel" customModule="Instagram_Clone" customModuleProvider="target">
-                        <rect key="frame" x="16" y="8" width="42" height="35"/>
+                        <rect key="frame" x="16" y="8" width="10" height="35"/>
                         <color key="backgroundColor" name="incomingMessageBackground"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="aWG-kg-7IY"/>
@@ -87,10 +87,10 @@
     </objects>
     <designables>
         <designable name="Yqo-jk-e9X">
-            <size key="intrinsicContentSize" width="42" height="42.5"/>
+            <size key="intrinsicContentSize" width="10" height="26.5"/>
         </designable>
         <designable name="u62-by-3Sd">
-            <size key="intrinsicContentSize" width="42" height="42.5"/>
+            <size key="intrinsicContentSize" width="10" height="26.5"/>
         </designable>
     </designables>
     <resources>

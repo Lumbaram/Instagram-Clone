@@ -18,6 +18,8 @@ class ChatTableViewCell: UITableViewCell {
         messageLabel.layer.masksToBounds = true
         message2Label.layer.cornerRadius = 15
         message2Label.layer.masksToBounds = true
+        messageLabel.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]
+        message2Label.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMinYCorner]
     }
     // MARK: Variable
     var chatModel: ChatModel? {
