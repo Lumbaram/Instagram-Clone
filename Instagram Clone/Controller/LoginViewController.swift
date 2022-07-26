@@ -17,6 +17,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         userLoginOrNot()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
+    }
     // MARK: loginButtonClick
     @IBAction func loginButtonClick(_ sender: UIButton) {
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { authResult, error in

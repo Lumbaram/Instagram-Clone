@@ -19,6 +19,8 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var postSaveButton: UIButton!
     @IBOutlet weak var postShareButton: UIButton!
+    
+    @IBOutlet weak var doubleTabLikeImage: UIImageView!
     // MARK: Variable
     var postData: PostData? {
         didSet {
@@ -30,6 +32,25 @@ class PostTableViewCell: UITableViewCell {
         super.awakeFromNib()
         userImage.layer.cornerRadius = userImage.frame.width/2
         getProfileFirebaseData()
+        setUpDoubleTabImage()
+    }
+    func setUpDoubleTabImage() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
+        tap.numberOfTapsRequired = 2
+        postImageCell.isUserInteractionEnabled = true
+        postImageCell.addGestureRecognizer(tap)
+    }
+    @objc func doubleTapped() {
+        likeButton.isSelected = true
+        print("👍🏻like")
+        showIcon()
+    }
+    func showIcon() {
+        doubleTabLikeImage.isHidden = false
+        self.doubleTabLikeImage.alpha = 1
+        UIView.animate(withDuration: 1, delay: 0.5, options: UIView.AnimationOptions.transitionFlipFromTop) {
+            self.doubleTabLikeImage.alpha = 0
+        }
     }
     // MARK: getProfileFirebaseData
     func getProfileFirebaseData() {

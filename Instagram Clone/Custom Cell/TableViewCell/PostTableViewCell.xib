@@ -123,12 +123,21 @@
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title=""/>
                     </button>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vsC-gj-HI1">
+                        <rect key="frame" x="116" y="178" width="80" height="77.5"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="IGX-ue-JTW"/>
+                            <constraint firstAttribute="width" constant="80" id="c7T-JN-bqg"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="lzi-Oq-0oQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="1gU-uw-Ajr"/>
                     <constraint firstItem="IyX-Oe-yxj" firstAttribute="leading" secondItem="MCc-BX-YZl" secondAttribute="trailing" constant="8" id="3nL-IK-5l2"/>
                     <constraint firstItem="7PZ-sQ-UnZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="61f-Sy-lje"/>
                     <constraint firstItem="CMg-YB-a19" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="8Rc-4q-vjS"/>
+                    <constraint firstItem="vsC-gj-HI1" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Awo-Xr-yFZ"/>
                     <constraint firstItem="SzP-kv-Q5P" firstAttribute="leading" secondItem="evU-gc-Fby" secondAttribute="trailing" constant="8" id="BWe-8t-EOo"/>
                     <constraint firstItem="MCc-BX-YZl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Bod-Ua-OlU"/>
                     <constraint firstItem="7PZ-sQ-UnZ" firstAttribute="leading" secondItem="IyX-Oe-yxj" secondAttribute="trailing" constant="4" id="DAJ-YE-l1A"/>
@@ -147,6 +156,7 @@
                     <constraint firstItem="GXx-fH-sTf" firstAttribute="top" secondItem="CMg-YB-a19" secondAttribute="bottom" constant="8" id="jTs-31-g48"/>
                     <constraint firstItem="Wbu-iJ-gca" firstAttribute="top" secondItem="evU-gc-Fby" secondAttribute="bottom" constant="8" id="khQ-T7-Kv4"/>
                     <constraint firstItem="Wbu-iJ-gca" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="kq5-FA-6iZ"/>
+                    <constraint firstItem="vsC-gj-HI1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="rjm-an-nHa"/>
                     <constraint firstItem="jGf-1X-8UH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="tOw-HZ-hZt"/>
                     <constraint firstItem="HLb-wg-7U9" firstAttribute="top" secondItem="CMg-YB-a19" secondAttribute="bottom" constant="9" id="wUH-eg-lya"/>
                     <constraint firstItem="CMg-YB-a19" firstAttribute="top" secondItem="MCc-BX-YZl" secondAttribute="bottom" constant="8" id="wYk-3h-poE"/>
@@ -157,6 +167,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="doubleTabLikeImage" destination="vsC-gj-HI1" id="syh-Ue-DUg"/>
                 <outlet property="likeButton" destination="evU-gc-Fby" id="9pu-nT-eJ4"/>
                 <outlet property="messageLabel" destination="Wbu-iJ-gca" id="0id-pJ-nQn"/>
                 <outlet property="postImageCell" destination="CMg-YB-a19" id="v7L-LQ-X9p"/>

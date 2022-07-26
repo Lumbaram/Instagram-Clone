@@ -21,6 +21,10 @@ class SignupViewController: UIViewController {
         userImage.isUserInteractionEnabled = true
         userImage.addGestureRecognizer(gesture)
     }
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = false
+        title = "Sign up"
+    }
     // MARK: tabImageForSelectAnyImage
     @objc func tabImage() {
         openImage()
@@ -34,10 +38,6 @@ class SignupViewController: UIViewController {
                 self.navigationToTabBarController()
             }
         }
-    }
-    // MARK: backToLoginButtonClick
-    @IBAction func backToLoginButtonClick(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
     }
     // MARK: goToLoginPageButtonClick
     @IBAction func goToLoginPageButtonClick(_ sender: UIButton) {

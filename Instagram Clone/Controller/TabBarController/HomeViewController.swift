@@ -77,10 +77,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.userButton.addTarget(self, action: #selector(tabButton), for: .touchUpInside)
         cell.likeButton.addTarget(self, action: #selector(likeButtonClick(sender:)), for: .touchUpInside)
         cell.postSaveButton.addTarget(self, action: #selector(postSaveButtonClick(sender:)), for: .touchUpInside)
-        let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
-        tap.numberOfTapsRequired = 2
-        cell.postImageCell.isUserInteractionEnabled = true
-        cell.postImageCell.addGestureRecognizer(tap)
         return cell
     }
     @objc func tabButton() {
@@ -91,8 +87,5 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     @objc func postSaveButtonClick(sender: UIButton) {
         sender.isSelected.toggle()
-    }
-    @objc func doubleTapped() {
-        print("👍🏻like")
     }
 }
