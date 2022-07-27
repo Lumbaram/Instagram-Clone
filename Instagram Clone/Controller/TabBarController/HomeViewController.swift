@@ -80,7 +80,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     @objc func tabButton() {
-        print("button click")
+        print("Tab Button")
     }
     @objc func likeButtonClick(sender: UIButton) {
         sender.isSelected.toggle()
